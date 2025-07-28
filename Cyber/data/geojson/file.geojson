@@ -1,0 +1,19 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Country or State Name",
+        "cyberRate": 25.5
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          // Coordinates for the polygon
+        ]
+      }
+    },
+    // More features...
+  ]
+}
