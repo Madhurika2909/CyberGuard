@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Download } from "lucide-react";
 
-const thirdparty = () => {
+const Thirdparty = () => {
   return (
     <motion.div
       style={{
@@ -146,4 +146,4 @@ const thirdparty = () => {
   );
 };
 
-export default thirdparty;
+export default Thirdparty;

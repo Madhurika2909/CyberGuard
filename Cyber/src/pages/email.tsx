@@ -4,7 +4,7 @@ import { Download } from "lucide-react";
 import { useRouter } from "next/router";
 import React from "react";
 
-const email: React.FC = () => {
+const Email: React.FC = () => {
   const router = useRouter();
   const darkWebProject = projects.find((project) => project.id === 3);
 
@@ -178,4 +178,4 @@ const email: React.FC = () => {
   );
 };
 
-export default email;
+export default Email;

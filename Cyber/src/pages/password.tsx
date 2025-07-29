@@ -4,7 +4,7 @@ import { Download } from "lucide-react";
 import { useRouter } from "next/router";
 import React from "react";
 
-const password: React.FC = () => {
+const Password: React.FC = () => {
   const router = useRouter();
   const darkWebProject = projects.find((project) => {});
 
@@ -172,4 +172,4 @@ const password: React.FC = () => {
   );
 };
 
-export default password;
+export default Password;

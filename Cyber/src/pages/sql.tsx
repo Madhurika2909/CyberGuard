@@ -4,7 +4,7 @@ import { Download } from "lucide-react";
 import { useRouter } from "next/router";
 import React from "react";
 
-const sql: React.FC = () => {
+const Sql: React.FC = () => {
   const router = useRouter();
   const sqlCheckerProject = projects.find((project) => project.id === 1);
 
@@ -169,4 +169,4 @@ const sql: React.FC = () => {
   );
 };
 
-export default sql;
+export default Sql;

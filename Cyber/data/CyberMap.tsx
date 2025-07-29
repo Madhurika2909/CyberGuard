@@ -1,6 +1,5 @@
 import L from "leaflet";
-import "leaflet-ajax";
-import "leaflet/dist/leaflet.css"; // Import Leaflet CSS here
+import "leaflet/dist/leaflet.css";
 import React, { useEffect } from "react";
 
 const CyberMap: React.FC = () => {
@@ -11,22 +10,22 @@ const CyberMap: React.FC = () => {
       attribution: "&copy; OpenStreetMap contributors",
     }).addTo(map);
 
-    const geojsonLayer = new L.GeoJSON.AJAX(
-      "/data/geojson/file.geojson", // Update the path here
-      {
-        onEachFeature: (feature, layer) => {
-          layer.on("mouseover", () => {
-            const cyberRate = feature.properties.cyberRate;
-            layer.bindPopup(`Cyber Rate: ${cyberRate}%`).openPopup();
-          });
-          layer.on("mouseout", () => {
-            layer.closePopup();
-          });
-        },
-      }
-    );
-
-    geojsonLayer.addTo(map);
+    fetch("/data/geojson/file.geojson")
+      .then((res) => res.json())
+      .then((geojson) => {
+        const geojsonLayer = L.geoJSON(geojson, {
+          onEachFeature: (feature, layer) => {
+            layer.on("mouseover", () => {
+              const cyberRate = feature.properties.cyberRate;
+              layer.bindPopup(`Cyber Rate: ${cyberRate}%`).openPopup();
+            });
+            layer.on("mouseout", () => {
+              layer.closePopup();
+            });
+          },
+        });
+        geojsonLayer.addTo(map);
+      });
   }, []);
 
   return (

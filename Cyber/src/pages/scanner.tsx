@@ -4,7 +4,7 @@ import { Download } from "lucide-react";
 import { useRouter } from "next/router";
 import React from "react";
 
-const scanner: React.FC = () => {
+const Scanner: React.FC = () => {
   const router = useRouter();
   const securityProject = projects.find((project) => project.id === 1);
 
@@ -166,4 +166,4 @@ const scanner: React.FC = () => {
   );
 };
 
-export default scanner;
+export default Scanner;

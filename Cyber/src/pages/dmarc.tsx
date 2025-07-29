@@ -4,7 +4,7 @@ import { Download } from "lucide-react";
 import { useRouter } from "next/router";
 import React from "react";
 
-const dmarc: React.FC = () => {
+const Dmarc: React.FC = () => {
   const router = useRouter();
   const dmarcProject = projects.find((project) => project.id === 2);
 
@@ -171,4 +171,4 @@ const dmarc: React.FC = () => {
   );
 };
 
-export default dmarc;
+export default Dmarc;

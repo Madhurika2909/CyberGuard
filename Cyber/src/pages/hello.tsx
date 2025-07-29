@@ -4,7 +4,7 @@ import { Download } from "lucide-react";
 import { useRouter } from "next/router";
 import React from "react";
 
-const hello: React.FC = () => {
+const Hello: React.FC = () => {
   const router = useRouter();
   const darkWebProject = projects.find((project) => project.id === 1);
 
@@ -167,4 +167,4 @@ const hello: React.FC = () => {
   );
 };
 
-export default hello;
+export default Hello;
